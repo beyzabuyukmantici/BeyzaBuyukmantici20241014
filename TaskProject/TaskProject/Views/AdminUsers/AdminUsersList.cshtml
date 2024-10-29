@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewBag.Title = "Tüm Kullanıcılar";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -8,10 +8,9 @@
 <table class="table table-striped" id="userTable">
     <thead class="thead-dark">
         <tr>
-            <th>ID</th>
+            <th>Ad Soyad</th>
             <th>TCKN</th>
             <th>Email</th>
-            <th>Ad Soyad</th>
             <th>Telefon Numarası</th>
             <th>Oluşturulma Tarihi</th>
             <th>Hesap</th>
@@ -42,10 +41,9 @@
 
                         $('#userTable tbody').append(
                             '<tr>' +
-                            '<td>' + user.ID + '</td>' +
+                            '<td>' + user.FullName + '</td>' + 
                             '<td>' + user.TCKN + '</td>' +
                             '<td>' + user.Email + '</td>' +
-                            '<td>' + user.FullName + '</td>' +
                             '<td>' + (user.PhoneNumber ? user.PhoneNumber : '-') + '</td>' +
                             '<td>' + formattedDate + '</td>' +
                             '<td>' +

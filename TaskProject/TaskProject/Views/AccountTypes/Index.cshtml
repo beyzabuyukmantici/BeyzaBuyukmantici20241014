@@ -1,0 +1,90 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Türleri</title>
+
+    <link rel="stylesheet" href="~/Content/css/admin.css"> 
+
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Hesap Türleri</h2>
+        <p>
+            <a href="/AccountTypes/Create" class="admin-button">Yeni Oluştur</a> 
+        </p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Hesap Türü Adı</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody id="accountTypeTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            loadAccountTypes();
+
+            function loadAccountTypes() {
+                $.ajax({
+                    url: '/AccountTypes/GetAll',
+                    type: 'GET',
+                    success: function (data) {
+                        var tableBody = $('#accountTypeTableBody');
+                        tableBody.empty();
+
+                        $.each(data, function (index, item) {
+                            var row = '<tr>' +
+                                '<td>' + item.AccountTypeName + '</td>' +
+                                '<td>' +
+                                '<a href="/AccountTypes/Edit?id=' + item.AccountTypeID + '" class="btn btn-secondary">Düzenle</a> ' +
+                                '<button class="btn btn-secondary btn-sm delete-button" data-id="' + item.AccountTypeID + '">Sil</button>' +
+                                '</td>' +
+                                '</tr>';
+                            tableBody.append(row);
+                        });
+
+                        $('.delete-button').on('click', function () {
+                            var accountTypeID = $(this).data('id');
+                            if (confirm('Bu hesap türünü silmek istediğinize emin misiniz?')) {
+                                deleteAccountType(accountTypeID);
+                            }
+                        });
+                    },
+                    error: function () {
+                        alert('Veriler yüklenirken bir hata oluştu.');
+                    }
+                });
+            }
+
+            function deleteAccountType(id) {
+                $.ajax({
+                    url: '/AccountTypes/Delete',
+                    type: 'POST',
+                    data: { id: id }, 
+                    success: function (response) {
+                        if (response.success) {
+                            loadAccountTypes(); 
+                        } else {
+                            alert(response.message); 
+                        }
+                    },
+                    error: function (xhr) {
+                        var errorMessage = xhr.responseJSON ? xhr.responseJSON.message : 'Silme işlemi sırasında bir hata oluştu.';
+                        alert(errorMessage); 
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

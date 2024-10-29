@@ -1,0 +1,438 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|c:\\users\\han\u0130fe nur\\source\\repos\\taskprojectcccsssss\\taskproject\\taskproject\\models\\models.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\models\\models.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|c:\\users\\han\u0130fe nur\\source\\repos\\taskprojectcccsssss\\taskproject\\taskproject\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\controllers\\adminuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\controllers\\adminuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminusers\\adminaccountindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminusers\\adminaccountindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminusers\\adminlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminusers\\adminlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\transferhistories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\transferhistories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\transferhistories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\transferhistories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounttypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounttypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminaccounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminaccounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminusers\\adminuserslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminusers\\adminuserslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminusers\\adminregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminusers\\adminregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminusers\\admindetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminusers\\admindetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\adminusers\\adminaccountdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\adminusers\\adminaccountdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounttypes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounttypes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounttypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounttypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounttypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounttypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\taskproject\\views\\accounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84272473-F9E3-4148-A075-2D0FC69F6220}|TaskProject\\TaskProject.csproj|solutionrelative:taskproject\\views\\accounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Models.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Models\\Models.edmx",
+              "RelativeDocumentMoniker": "TaskProject\\Models\\Models.edmx",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Models\\Models.edmx [Diagram1]",
+              "RelativeToolTip": "TaskProject\\Models\\Models.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-10-29T16:19:02.449Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "TaskProject\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "TaskProject\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAUwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T16:12:09.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminUsersController.cs",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Controllers\\AdminUsersController.cs",
+              "RelativeDocumentMoniker": "TaskProject\\Controllers\\AdminUsersController.cs",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Controllers\\AdminUsersController.cs",
+              "RelativeToolTip": "TaskProject\\Controllers\\AdminUsersController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwFkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T16:03:55.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminAccounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminAccounts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminAccounts\\Index.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminAccounts\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:29:55.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAE4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:21:17.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Accounts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Index.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Accounts\\Index.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:37:53.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwFgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:29:02.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\TransferHistories\\Index.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\TransferHistories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\TransferHistories\\Index.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\TransferHistories\\Index.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAIwHIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:33:01.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminLogin.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminUsers\\AdminLogin.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminLogin.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminUsers\\AdminLogin.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAjwDgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:09:19.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminAccountIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminAccountIndex.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminUsers\\AdminAccountIndex.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminAccountIndex.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminUsers\\AdminAccountIndex.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:55:32.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "TaskProject\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "TaskProject\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:58:13.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Users\\Login.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Users\\Login.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Users\\Login.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Users\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:59:55.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Users\\Details.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Users\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Users\\Details.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Users\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:35:34.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\TransferHistories\\Create.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\TransferHistories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\TransferHistories\\Create.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\TransferHistories\\Create.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEoAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:31:51.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminAccounts\\Details.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminAccounts\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminAccounts\\Details.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminAccounts\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:51:31.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Index.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AccountTypes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Index.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AccountTypes\\Index.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:43:23.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminUsersList.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminUsersList.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminUsers\\AdminUsersList.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminUsersList.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminUsers\\AdminUsersList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:24:40.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminRegister.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminRegister.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminUsers\\AdminRegister.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminRegister.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminUsers\\AdminRegister.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:23:10.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminDetails.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminUsers\\AdminDetails.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminDetails.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminUsers\\AdminDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T15:04:31.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminAccountDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminAccountDetails.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AdminUsers\\AdminAccountDetails.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AdminUsers\\AdminAccountDetails.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AdminUsers\\AdminAccountDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAC4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:54:04.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AccountTypes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Edit.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AccountTypes\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:43:07.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AccountTypes\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Delete.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AccountTypes\\Delete.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:42:57.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Create.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\AccountTypes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\AccountTypes\\Create.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\AccountTypes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:41:41.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Details.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Accounts\\Details.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Details.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Accounts\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:36:09.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Accounts\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Delete.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Accounts\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:36:07.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Create.cshtml",
+              "RelativeDocumentMoniker": "TaskProject\\Views\\Accounts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\HAN\u0130FE NUR\\Source\\Repos\\TaskProjectcccsssss\\TaskProject\\TaskProject\\Views\\Accounts\\Create.cshtml",
+              "RelativeToolTip": "TaskProject\\Views\\Accounts\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T14:30:48.055Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

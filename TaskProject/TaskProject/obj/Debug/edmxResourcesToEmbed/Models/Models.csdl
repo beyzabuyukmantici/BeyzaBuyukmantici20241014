@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="taskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="taskEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(taskModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(taskModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Accounts" EntityType="taskModel.Accounts" />
+    <EntitySet Name="AccountTypes" EntityType="taskModel.AccountTypes" />
+    <EntitySet Name="AdminUser" EntityType="taskModel.AdminUser" />
+    <EntitySet Name="TransferHistory" EntityType="taskModel.TransferHistory" />
+    <EntitySet Name="Users" EntityType="taskModel.Users" />
+    <AssociationSet Name="FK__Accounts__Accoun__44FF419A" Association="taskModel.FK__Accounts__Accoun__44FF419A">
+      <End Role="AccountTypes" EntitySet="AccountTypes" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts__UserID__440B1D61" Association="taskModel.FK__Accounts__UserID__440B1D61">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferHistory_Accounts" Association="taskModel.FK_TransferHistory_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="TransferHistory" EntitySet="TransferHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferHistory_Accounts1" Association="taskModel.FK_TransferHistory_Accounts1">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="TransferHistory" EntitySet="TransferHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TransferH__ToUse__4F7CD00D" Association="taskModel.FK__TransferH__ToUse__4F7CD00D">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TransferHistory" EntitySet="TransferHistory" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AccountTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Balance" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AccountTypes" Relationship="taskModel.FK__Accounts__Accoun__44FF419A" FromRole="Accounts" ToRole="AccountTypes" />
+    <NavigationProperty Name="Users" Relationship="taskModel.FK__Accounts__UserID__440B1D61" FromRole="Accounts" ToRole="Users" />
+    <NavigationProperty Name="TransferHistory" Relationship="taskModel.FK_TransferHistory_Accounts" FromRole="Accounts" ToRole="TransferHistory" />
+    <NavigationProperty Name="TransferHistory1" Relationship="taskModel.FK_TransferHistory_Accounts1" FromRole="Accounts" ToRole="TransferHistory" />
+  </EntityType>
+  <EntityType Name="AccountTypes">
+    <Key>
+      <PropertyRef Name="AccountTypeID" />
+    </Key>
+    <Property Name="AccountTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountTypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="taskModel.FK__Accounts__Accoun__44FF419A" FromRole="AccountTypes" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="AdminUser">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCKN" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fullname" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Role" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TransferHistory">
+    <Key>
+      <PropertyRef Name="TransferID" />
+    </Key>
+    <Property Name="TransferID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FromUserID" Type="Int32" />
+    <Property Name="ToUserID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TransferDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FromAccountID" Type="Int32" Nullable="false" />
+    <Property Name="ToAccountID" Type="Int32" Nullable="false" />
+    <Property Name="RemainingBalance" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="RecipientRemainingBalance" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IsCanceled" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="taskModel.FK_TransferHistory_Accounts" FromRole="TransferHistory" ToRole="Accounts" />
+    <NavigationProperty Name="Accounts1" Relationship="taskModel.FK_TransferHistory_Accounts1" FromRole="TransferHistory" ToRole="Accounts" />
+    <NavigationProperty Name="Users" Relationship="taskModel.FK__TransferH__ToUse__4F7CD00D" FromRole="TransferHistory" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCKN" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Role" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="taskModel.FK__Accounts__UserID__440B1D61" FromRole="Users" ToRole="Accounts" />
+    <NavigationProperty Name="TransferHistory" Relationship="taskModel.FK__TransferH__ToUse__4F7CD00D" FromRole="Users" ToRole="TransferHistory" />
+  </EntityType>
+  <Association Name="FK__Accounts__Accoun__44FF419A">
+    <End Type="taskModel.AccountTypes" Role="AccountTypes" Multiplicity="1" />
+    <End Type="taskModel.Accounts" Role="Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountTypes">
+        <PropertyRef Name="AccountTypeID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="AccountTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts__UserID__440B1D61">
+    <End Type="taskModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="taskModel.Accounts" Role="Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferHistory_Accounts">
+    <End Type="taskModel.Accounts" Role="Accounts" Multiplicity="1" />
+    <End Type="taskModel.TransferHistory" Role="TransferHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="TransferHistory">
+        <PropertyRef Name="FromAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferHistory_Accounts1">
+    <End Type="taskModel.Accounts" Role="Accounts" Multiplicity="1" />
+    <End Type="taskModel.TransferHistory" Role="TransferHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="TransferHistory">
+        <PropertyRef Name="ToAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TransferH__ToUse__4F7CD00D">
+    <End Type="taskModel.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="taskModel.TransferHistory" Role="TransferHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TransferHistory">
+        <PropertyRef Name="ToUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

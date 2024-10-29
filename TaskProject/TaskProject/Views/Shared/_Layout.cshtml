@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            window.history.pushState(null, '', window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, '', window.location.href);
+            };
+        });
+    </script>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .sidebar h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .sidebar a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                margin: 5px 0;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                }
+
+            .sidebar i {
+                margin-right: 10px;
+            }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .user-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+            .user-photo:hover {
+                transform: scale(1.1);
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Varlık Yönetim Sistemi</h2>
+        <a href="@Url.Action("Index", "Accounts")"><i class="fas fa-university"></i> Hesaplarım</a>
+        <a href="@Url.Action("Create", "TransferHistories")"><i class="fas fa-money-bill-wave"></i> Para Transferi</a> 
+        <a href="@Url.Action("Index", "TransferHistories")"><i class="fas fa-exchange-alt"></i> Transfer Geçmişi</a>
+        <a href="@Url.Action("Details", "Users")"><i class="fas fa-cog"></i> Profil ve Ayarlar</a>
+        <a href="@Url.Action("Logout", "Users")"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+    </div>
+
+    <div class="content">
+        <div class="body-content">
+            @RenderBody()
+            <hr />
+
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

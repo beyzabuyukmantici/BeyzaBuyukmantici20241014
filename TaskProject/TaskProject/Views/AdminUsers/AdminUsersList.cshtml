@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Tüm Kullanıcılar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Tüm Kullanıcılar</h2>
+
+<table class="table table-striped" id="userTable">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>TCKN</th>
+            <th>Email</th>
+            <th>Ad Soyad</th>
+            <th>Telefon Numarası</th>
+            <th>Oluşturulma Tarihi</th>
+            <th>Hesap</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: '@Url.Action("GetUsers", "AdminUsers")',
+            type: 'GET',
+            success: function (data) {
+                $('#userTable tbody').empty();
+                if (data.success !== false) {
+                    $.each(data, function (index, user) {
+                        var timestamp = parseInt(user.CreatedDate.match(/\/Date\((\d+)\)\//)[1]);
+                        var createdDate = new Date(timestamp);
+                        var formattedDate = createdDate.getFullYear() + "-" +
+                                            ("0" + (createdDate.getMonth() + 1)).slice(-2) + "-" +
+                                            ("0" + createdDate.getDate()).slice(-2) + " " +
+                                            ("0" + createdDate.getHours()).slice(-2) + ":" +
+                                            ("0" + createdDate.getMinutes()).slice(-2) + ":" +
+                                            ("0" + createdDate.getSeconds()).slice(-2);
+
+                        $('#userTable tbody').append(
+                            '<tr>' +
+                            '<td>' + user.ID + '</td>' +
+                            '<td>' + user.TCKN + '</td>' +
+                            '<td>' + user.Email + '</td>' +
+                            '<td>' + user.FullName + '</td>' +
+                            '<td>' + (user.PhoneNumber ? user.PhoneNumber : '-') + '</td>' +
+                            '<td>' + formattedDate + '</td>' +
+                            '<td>' +
+                            '<a href="@Url.Action("AdminAccountIndex", "AdminUsers")?userId=' + user.ID + '" class="text-info" title="Hesapları Gör">' +
+                            '<i class="fas fa-eye"></i>' +
+                            '</a>' +
+                            '</td>' +
+                            '</tr>'
+                        );
+                    });
+                } else {
+                    alert(data.message);
+                }
+            },
+            error: function () {
+                alert('Kullanıcı verileri yüklenirken bir hata oluştu.');
+            }
+        });
+    });
+</script>
+
+<link rel="stylesheet" href="~/Content/css/admin.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />

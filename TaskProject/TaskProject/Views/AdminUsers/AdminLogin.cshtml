@@ -1,0 +1,78 @@
+﻿@model TaskProject.ViewModel.AdminViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Giriş Yap</title>
+
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/css/admin.css">
+    <style>
+        .user-login-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Giriş Yap</h2>
+        <div class="user-login-link">
+            <a href="@Url.Action("Login", "Users")">Kullanıcı Girişi</a>
+        </div>
+        @using (Html.BeginForm("AdminLogin", "AdminUsers", FormMethod.Post, new { id = "loginForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label for="adminEmail">E-posta:</label>
+                <input type="email" id="adminEmail" name="Email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="adminPassword">Şifre:</label>
+                <input type="password" id="adminPassword" name="Password" class="form-control" required />
+            </div>
+            <button type="submit">Giriş Yap</button>
+        }
+
+        <div class="register-link">
+            <p>Hesabınız yok mu? <a href="@Url.Action("AdminRegister", "AdminUsers")">Buradan kaydolun</a>.</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            window.history.pushState(null, '', window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, '', window.location.href);
+            };
+
+            $("#loginForm").on("submit", function(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: '@Url.Action("AdminLogin", "AdminUsers")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            window.location.href = response.redirectUrl;
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert("Giriş işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

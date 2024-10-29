@@ -1,0 +1,79 @@
+﻿@model TaskProject.ViewModel.AccountsTypesViewModel
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Türü Düzenle</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .text-danger {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hesap Türü Düzenle</h2>
+        <form id="editAccountTypeForm">
+            <input type="hidden" id="AccountTypeID" name="AccountTypeID" value="@Model.AccountTypeID" />
+            <div class="form-group">
+                <label for="AccountTypeName">Hesap Türü Adı</label>
+                <input type="text" class="form-control" id="AccountTypeName" name="AccountTypeName" value="@Model.AccountTypeName" required />
+                <div class="text-danger" id="accountTypeNameError"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <a href="/AccountTypes/Index" class="btn btn-secondary">Listeye Dön</a>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#editAccountTypeForm').on('submit', function (e) {
+                e.preventDefault();
+
+                var accountTypeID = $('#AccountTypeID').val();
+                var accountTypeName = $('#AccountTypeName').val();
+
+                $.ajax({
+                    url: '/AccountTypes/Edit',
+                    type: 'POST',
+                    data: {
+                        AccountTypeID: accountTypeID,
+                        AccountTypeName: accountTypeName,
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            window.location.href = '/AccountTypes/Index';
+                        } else {
+                            $('#accountTypeNameError').text(response.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        var errorMessage = xhr.responseJSON ? xhr.responseJSON.message : 'Bir hata oluştu. Lütfen tekrar deneyin.';
+                        $('#accountTypeNameError').text(errorMessage);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

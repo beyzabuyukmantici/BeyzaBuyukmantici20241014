@@ -1,0 +1,87 @@
+﻿@model TaskProject.ViewModel.UserViewModel
+@{
+    Layout = null;
+}
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/css/admin.css">
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Giriş Yap</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .register-link {
+            margin-top: 20px;
+        }
+
+        .admin-login-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Giriş Yap</h2>
+        <div class="admin-login-link">
+            <a href="@Url.Action("AdminLogin", "AdminUsers")">Admin Girişi</a>
+        </div>
+        @using (Html.BeginForm("Login", "Users", FormMethod.Post, new { id = "loginForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="Email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="Password" class="form-control" required />
+            </div>
+            <button type="submit">Giriş Yap</button>
+        }
+
+        <div class="register-link">
+            <p>Hesabınız yok mu? <a href="@Url.Action("Register", "Users")">Buradan kaydolun</a>.</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            window.history.pushState(null, '', window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, '', window.location.href);
+            };
+
+            $("#loginForm").on("submit", function(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: '@Url.Action("Login", "Users")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            window.location.href = response.redirectUrl;
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert("Giriş işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

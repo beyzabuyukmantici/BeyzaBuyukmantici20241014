@@ -1,0 +1,123 @@
+﻿@model TaskProject.ViewModel.UserViewModel
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Kullanıcı Detayları</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/css/user.css"> 
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+        .btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex: 1;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kullanıcı Detayları</h2>
+        <div class="row">
+            <div class="col form-group">
+                <label>TCKN:</label>
+                <div class="readonly-text">@Model.TCKN</div>
+            </div>
+            <div class="col form-group">
+                <label>E-posta:</label>
+                <div class="readonly-text">@Model.Email</div>
+            </div>
+            <div class="col form-group">
+                <label>Ad Soyad:</label>
+                <div class="readonly-text">@Model.FullName</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col form-group">
+                <label>Telefon:</label>
+                <input type="text" id="phoneNumber" value="@Model.PhoneNumber" />
+                <button class="btn" id="updatePhone">Telefonu Güncelle</button>
+            </div>
+            <div class="col form-group">
+                <label>Mevcut Şifre:</label>
+                <input type="password" id="currentPassword" />
+            </div>
+            <div class="col form-group">
+                <label>Yeni Şifre:</label>
+                <input type="password" id="newPassword" />
+                <button class="btn" id="changePassword">Şifreyi Değiştir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#updatePhone').click(function() {
+                var phoneNumber = $('#phoneNumber').val();
+                $.ajax({
+                    url: '@Url.Action("UpdatePhone", "Users")',
+                    type: 'POST',
+                    data: { phoneNumber: phoneNumber },
+                    success: function(response) {
+                        alert(response.message);
+                    },
+                    error: function() {
+                        alert("Bir hata oluştu.");
+                    }
+                });
+            });
+
+            $('#changePassword').click(function() {
+                var currentPassword = $('#currentPassword').val();
+                var newPassword = $('#newPassword').val();
+                $.ajax({
+                    url: '@Url.Action("ChangePassword", "Users")',
+                    type: 'POST',
+                    data: { currentPassword: currentPassword, newPassword: newPassword },
+                    success: function(response) {
+                        alert(response.message);
+                    },
+                    error: function() {
+                        alert("Bir hata oluştu.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

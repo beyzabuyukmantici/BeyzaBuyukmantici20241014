@@ -1,0 +1,75 @@
+﻿@model TaskProject.Models.TransferHistory
+
+<h2>Yeni Transfer Oluştur</h2>
+
+<form id="transferForm">
+    <div class="form-group">
+        <label for="FromAccountID" class="control-label">Gönderen Hesap</label>
+        <select id="FromAccountID" name="FromAccountID" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var account in (SelectList)ViewBag.FromAccountID)
+            {
+                <option value="@account.Value">@account.Text</option>
+            }
+        </select>
+        <span class="text-danger" id="fromAccountError"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="ToAccountID" class="control-label">Alan Hesap</label>
+        <select id="ToAccountID" name="ToAccountID" class="form-control">
+            <option value="">Seçiniz</option>
+            @foreach (var account in (SelectList)ViewBag.ToAccountID)
+            {
+                <option value="@account.Value">@account.Text</option>
+            }
+        </select>
+        <span class="text-danger" id="toAccountError"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Amount" class="control-label">Tutar</label>
+        <input type="number" id="Amount" name="Amount" class="form-control" required>
+        <span class="text-danger" id="amountError"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Description" class="control-label">Açıklama</label>
+        <textarea id="Description" name="Description" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Transfer Oluştur</button>
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+        $(document).ready(function () {
+            $('#transferForm').on('submit', function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '@Url.Action("Create", "TransferHistories")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            alert(response.message);
+                            window.location.href = '@Url.Action("Index", "TransferHistories")';
+                        } else {
+                            if (response.errors) {
+                                $('#fromAccountError').text(response.errors.includes("Gönderen veya alıcı hesap bulunamadı veya hesap aktif değil.") ? "Gönderen veya alıcı hesap bulunamadı." : "");
+                                $('#toAccountError').text(response.errors.includes("Gönderen veya alıcı hesap bulunamadı veya hesap aktif değil.") ? "Gönderen veya alıcı hesap bulunamadı." : "");
+                                $('#amountError').text(response.errors.includes("Gönderilecek miktar sıfırdan büyük olmalıdır.") ? "Gönderilecek miktar sıfırdan büyük olmalıdır." : "");
+                            }
+                        }
+                    },
+                    error: function () {
+                        alert("Transfer oluşturulurken bir hata oluştu.");
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+<link rel="stylesheet" href="~/Content/css/user.css"> <!-- Kullanıcı stil dosyası eklendi -->

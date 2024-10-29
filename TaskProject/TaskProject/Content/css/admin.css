@@ -1,0 +1,79 @@
+﻿/* Admin Paneli için Genel Ayarlar */
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1)); 
+	margin: 0;
+	color: #234482; 
+}
+
+.admin-container {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.95); 
+}
+
+h2 {
+	text-align: center;
+	color: #234482; 
+}
+
+.admin-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+	.admin-table th, .admin-table td {
+		padding: 10px;
+		text-align: left;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.admin-table th {
+		background-color: #7f8198; 
+		color: white; 
+	}
+
+	.admin-table tr:hover {
+		background-color: rgba(0, 0, 0, 0.05); 
+	}
+
+/* Buton Stilleri */
+.admin-button {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #234482; 
+	background-color: transparent;
+	color: #234482;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+	.admin-button:hover {
+		background-color: #234482;
+		color: white;
+	}
+
+.admin-button-secondary {
+	border-color: #7f8198;
+	color: #7f8198;
+}
+
+	.admin-button-secondary:hover {
+		background-color: #7f8198;
+		color: white;
+	}
+
+.admin-button-danger {
+	border-color: #dc3545;	
+	color: #dc3545;
+}
+
+	.admin-button-danger:hover {
+		background-color: #dc3545;
+		color: white;
+	}

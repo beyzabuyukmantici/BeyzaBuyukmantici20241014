@@ -1,0 +1,93 @@
+﻿@model TaskProject.ViewModel.AdminViewModel
+@{
+    Layout = null;
+}
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/css/admin.css"> <!-- Admin stil dosyası eklendi -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Kayıt Ol</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Kayıt Ol</h2>
+        @using (Html.BeginForm("AdminRegister", "AdminUsers", FormMethod.Post, new { id = "registerForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label for="tckn">TCKN:</label>
+                <input type="text" id="tckn" name="TCKN" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="Email" class="form-control" required />
+                <div id="emailError" class="error-message" style="display:none;"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="PasswordHash" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="fullname">Ad Soyad:</label>
+                <input type="text" id="fullname" name="FullName" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Telefon Numarası:</label>
+                <input type="text" id="phoneNumber" name="PhoneNumber" class="form-control" />
+            </div>
+            <button type="submit">Kayıt Ol</button>
+        }
+
+        <div class="login-prompt">
+            <p>Hesabınız zaten var mı? <a href="@Url.Action("AdminLogin", "AdminUsers")">Giriş yapın.</a></p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#registerForm").on("submit", function(event) {
+                event.preventDefault();
+
+                $("#emailError").hide();
+
+                var email = $("#email").val();
+                $.ajax({
+                    url: '@Url.Action("AdminCheckEmail", "AdminUsers")',
+                    type: 'POST',
+                    data: { email: email },
+                    success: function(response) {
+                        if (response.exists) {
+                            $("#emailError").text("Bu e-posta adresi zaten kayıtlı.").show();
+                        } else {
+                            $.ajax({
+                                url: '@Url.Action("AdminRegister", "AdminUsers")',
+                                type: 'POST',
+                                data: $("#registerForm").serialize(),
+                                success: function(registerResponse) {
+                                    if (registerResponse.success) {
+                                        window.location.href = registerResponse.redirectUrl;
+                                    } else {
+                                        alert(registerResponse.message);
+                                    }
+                                },
+                                error: function() {
+                                    alert("Kayıt işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.");
+                                }
+                            });
+                        }
+                    },
+                    error: function() {
+                        $("#emailError").text("Bir hata oluştu. Lütfen tekrar deneyin.").show();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

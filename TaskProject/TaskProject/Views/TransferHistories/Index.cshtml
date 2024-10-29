@@ -1,0 +1,115 @@
+﻿@model TaskProject.ViewModel.TransferHistoryCombinedViewModel
+
+<h3>Gelen Transferler</h3>
+@if (Model.IncomingTransfers != null && Model.IncomingTransfers.Any())
+{
+    <table class="transfer-history-table">
+        <thead>
+            <tr>
+                <th>Gönderen Hesap Numarası</th>
+                <th>Alıcı Hesap Numarası</th>
+                <th>Tutar</th>
+                <th>Transfer Tarihi</th>
+                <th>Açıklama</th>
+                <th>Kalan Bakiye</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transfer in Model.IncomingTransfers)
+            {
+                <tr>
+                    <td>@transfer.FromAccountNumber</td>
+                    <td>@transfer.ToAccountNumber</td>
+                    <td>@transfer.Amount</td>
+                    <td>@transfer.TransferDate.ToString("dd.MM.yyyy")</td>
+                    <td>@transfer.Description</td>
+                    <td>@transfer.RecipientRemainingBalance</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>@ViewBag.IncomingMessage</div>
+}
+
+<h3>Giden Transferler</h3>
+@if (Model.OutgoingTransfers != null && Model.OutgoingTransfers.Any())
+{
+    <table class="transfer-history-table">
+        <thead>
+            <tr>
+                <th>Alıcı Hesap Numarası</th>
+                <th>Gönderen Hesap Numarası</th>
+                <th>Tutar</th>
+                <th>Transfer Tarihi</th>
+                <th>Açıklama</th>
+                <th>Kalan Bakiye</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transfer in Model.OutgoingTransfers)
+            {
+                <tr>
+                    <td>@transfer.ToAccountNumber</td>
+                    <td>@transfer.FromAccountNumber</td>
+                    <td>@transfer.Amount</td>
+                    <td>@transfer.TransferDate.ToString("dd.MM.yyyy")</td>
+                    <td>@transfer.Description</td>
+                    <td>@transfer.RemainingBalance</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>@ViewBag.OutgoingMessage</div>
+}
+
+<link rel="stylesheet" href="~/Content/css/user.css">
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.SuccessMessage
+    </div>
+}
+
+<style>
+    .transfer-history-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+        .transfer-history-table th,
+        .transfer-history-table td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+        }
+
+        .transfer-history-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .transfer-history-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .transfer-history-table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        .transfer-history-table td {
+            transition: background-color 0.3s ease;
+        }
+</style>

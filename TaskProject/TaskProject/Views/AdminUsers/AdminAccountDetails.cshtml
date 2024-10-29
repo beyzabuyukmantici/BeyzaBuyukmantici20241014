@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Admin Hesap Detay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model TaskProject.ViewModel.AccountDetailsViewModel
+@using System.Linq
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="~/Content/css/admin.css"> 
+<div class="container mt-4">
+    <h2>Hesap Detayları</h2>
+    <dl class="row">
+        <dt class="col-sm-3">Hesap Numarası</dt>
+        <dd class="col-sm-9">@Model.Account.AccountNumber</dd>
+
+        <dt class="col-sm-3">Hesap Türü</dt>
+        <dd class="col-sm-9">@Model.Account.AccountTypeName</dd>
+
+        <dt class="col-sm-3">Bakiye</dt>
+        <dd class="col-sm-9">@Model.Account.Balance.ToString("C2")</dd>
+
+        <dt class="col-sm-3">Oluşturma Tarihi</dt>
+        <dd class="col-sm-9">@Model.Account.CreatedDate.ToString("dd.MM.yyyy HH:mm")</dd>
+    </dl>
+
+    <h2>Gelen Transferler</h2>
+    <table class="table table-bordered table-striped mt-3" id="incomingTransfers">
+        <thead class="thead-dark">
+            <tr>
+                <th>Gönderen Hesap</th>
+                <th>Miktar</th>
+                <th>Tarih</th>
+                <th>Açıklama</th>
+                <th>Güncel Bakiye</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Giden Transferler</h2>
+    <table class="table table-bordered table-striped mt-3" id="outgoingTransfers">
+        <thead class="thead-dark">
+            <tr>
+                <th>Alıcı Hesap</th>
+                <th>Miktar</th>
+                <th>Tarih</th>
+                <th>Açıklama</th>
+                <th>Güncel Bakiye</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var accountId = @Model.Account.AccountID;
+        $.ajax({
+            url: '@Url.Action("GetTransferHistory", "AdminUsers")',
+            type: 'GET',
+            data: { accountId: accountId },
+            success: function (data) {
+                $.each(data.incomingMovements, function (index, movement) {
+                    var timestamp = parseInt(movement.TransferDate.match(/\/Date\((\d+)\)\//)[1]);
+                    var TransferDate = new Date(timestamp);
+                    var formattedDate = TransferDate.getFullYear() + "-" +
+                        ("0" + (TransferDate.getMonth() + 1)).slice(-2) + "-" +
+                        ("0" + TransferDate.getDate()).slice(-2) + " " +
+                        ("0" + TransferDate.getHours()).slice(-2) + ":" +
+                        ("0" + TransferDate.getMinutes()).slice(-2) + ":" +
+                        ("0" + TransferDate.getSeconds()).slice(-2);
+
+                    $('#incomingTransfers tbody').append(
+                        '<tr>' +
+                        '<td>' + movement.FromAccountNumber + '</td>' +
+                        '<td>' + movement.Amount.toLocaleString('tr-TR', { style: 'currency', currency: 'TRY' }) + '</td>' +
+                        '<td>' + formattedDate + '</td>' +
+                        '<td>' + movement.Description + '</td>' +
+                        '<td>' + movement.RecipientRemainingBalance.toLocaleString('tr-TR', { style: 'currency', currency: 'TRY' }) + '</td>' +
+                        '</tr>'
+                    );
+                });
+
+                $.each(data.outgoingMovements, function (index, movement) {
+                    var timestamp = parseInt(movement.TransferDate.match(/\/Date\((\d+)\)\//)[1]);
+                    var TransferDate = new Date(timestamp);
+                    var formattedDate = TransferDate.getFullYear() + "-" +
+                        ("0" + (TransferDate.getMonth() + 1)).slice(-2) + "-" +
+                        ("0" + TransferDate.getDate()).slice(-2) + " " +
+                        ("0" + TransferDate.getHours()).slice(-2) + ":" +
+                        ("0" + TransferDate.getMinutes()).slice(-2) + ":" +
+                        ("0" + TransferDate.getSeconds()).slice(-2);
+
+                    var cancelButton = '<button class="btn btn-danger" id="cancelTransferButton_' + movement.TransferID + '" onclick="cancelTransfer(' + movement.TransferID + ')">Geri Al</button>';
+                    if (movement.IsCanceled === true) {
+                        cancelButton = '';
+                    }
+
+                    $('#outgoingTransfers tbody').append(
+                        '<tr>' +
+                        '<td>' + movement.ToAccountNumber + '</td>' +
+                        '<td>' + movement.Amount.toLocaleString('tr-TR', { style: 'currency', currency: 'TRY' }) + '</td>' +
+                        '<td>' + formattedDate + '</td>' +
+                        '<td>' + movement.Description + '</td>' +
+                        '<td>' + movement.RemainingBalance.toLocaleString('tr-TR', { style: 'currency', currency: 'TRY' }) + '</td>' +
+                        '<td>' + cancelButton + '</td>' +
+                        '</tr>'
+                    );
+                });
+
+            },
+            error: function () {
+                alert("Transfer geçmişi alınırken bir hata oluştu.");
+            }
+        });
+    });
+
+    function cancelTransfer(transferId) {
+        $.ajax({
+            url: '@Url.Action("CancelTransfer", "AdminUsers")',
+            type: 'POST',
+            data: { transferId: transferId },
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                    $('#cancelTransferButton_' + transferId).hide();
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function () {
+                alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+            }
+        });
+    }
+</script>

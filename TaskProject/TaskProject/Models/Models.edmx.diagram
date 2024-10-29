@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="93a76ac8bc254d158dfdda1305bb7f4e" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="taskModel.Accounts" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="taskModel.AccountTypes" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="taskModel.AdminUser" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="taskModel.TransferHistory" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="taskModel.Users" Width="1.5" PointX="0.75" PointY="1.25" />
+        <AssociationConnector Association="taskModel.FK__Accounts__Accoun__44FF419A" />
+        <AssociationConnector Association="taskModel.FK__Accounts__UserID__440B1D61" />
+        <AssociationConnector Association="taskModel.FK_TransferHistory_Accounts" />
+        <AssociationConnector Association="taskModel.FK_TransferHistory_Accounts1" />
+        <AssociationConnector Association="taskModel.FK__TransferH__ToUse__4F7CD00D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

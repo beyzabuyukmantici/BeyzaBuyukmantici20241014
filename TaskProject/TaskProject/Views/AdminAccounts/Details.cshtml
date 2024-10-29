@@ -1,0 +1,27 @@
+﻿@model TaskProject.ViewModel.AccountViewModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hesap Detayları</title>
+    <link rel="stylesheet" href="~/Content/css/admin.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="account-details">
+            <h2>Hesap Detayları</h2>
+            <div>
+                <strong>Hesap Numarası:</strong> @Model.AccountNumber <br />
+                <strong>Kullanıcı ID:</strong> @Model.UserID <br />
+                <strong>Bakiye:</strong> @Model.Balance.ToString("C2") <br />
+                <strong>Oluşturulma Tarihi:</strong> @Model.CreatedDate.ToString("dd.MM.yyyy") <br />
+                <strong>Hesap Türü:</strong> @Model.AccountTypeName <br />
+            </div>
+            <a href="@Url.Action("Index", "AdminAccounts")" class="admin-button btn btn-primary">Geri Dön</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -13,7 +13,6 @@ TaskProject, kullanıcıların ve yöneticilerin hesap yönetimi, transfer işle
 ## Kurulum
 1. **Proje İndirme**: Projeyi GitHub veya başka bir kaynak üzerinden indirin.
 
-https://github.com/beyzabuyukmantici/BeyzaBuyukmantici20241007
 
 2. **Gerekli Paketlerin Yüklenmesi**: Proje dizinine gidin ve NuGet paketlerini yükleyin.
 
